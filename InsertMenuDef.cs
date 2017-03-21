@@ -21,7 +21,7 @@ namespace PageMapMenuBar
 
         public long ItemCount
         {
-            get { return 6; }
+            get { return 7; }
         }
 
         public void GetItemInfo(int pos, ItemDef itemDef)
@@ -50,6 +50,10 @@ namespace PageMapMenuBar
                     break;
                 case 5:
                     itemDef.ID = "PageMapMenuBar.InsertLegend";
+                    itemDef.Group = false;
+                    break;
+                case 6:
+                    itemDef.ID = "PageMapMenuBar.FrmZhujiCmd";
                     itemDef.Group = false;
                     break;
                 

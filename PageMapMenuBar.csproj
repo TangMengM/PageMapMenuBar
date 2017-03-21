@@ -45,6 +45,10 @@
     <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
@@ -64,6 +68,10 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="MyPluginEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MyPluginEngine\bin\Debug\MyPluginEngine.dll</HintPath>
+    </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
@@ -79,6 +87,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExportMapCmd.cs" />
+    <Compile Include="FrmZhuji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmZhuji.Designer.cs">
+      <DependentUpon>FrmZhuji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmZhujiCmd.cs" />
     <Compile Include="Library\ElementPropetyImp.cs" />
     <Compile Include="InsertLegend.cs" />
     <Compile Include="InsertMenuDef.cs" />
@@ -112,6 +127,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmZhuji.resx">
+      <DependentUpon>FrmZhuji.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Image\ElementTextBold.ico" />
     <EmbeddedResource Include="Image\ElementTextItalic.ico" />
     <EmbeddedResource Include="Image\ElementTextStrikeThru.ico" />
@@ -130,12 +148,6 @@
     <EmbeddedResource Include="InsertTextForm.resx">
       <DependentUpon>InsertTextForm.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MyPluginEngine\MyPluginEngine.csproj">
-      <Project>{40E8851D-BDE3-450E-AF6A-5D4CA40B0FB7}</Project>
-      <Name>MyPluginEngine</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Image\导出.ico" />
